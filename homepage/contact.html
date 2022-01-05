@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- Some Javascript...enables stylesheet to work on this page? -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <script>
+            function thank()
+            {
+                let name = document.querySelector('#name').value;
+                alert('Have a great day ' + name);
+            }
+        </script>
+
+        <link href="styles.css" rel="stylesheet">
+        <title>Contact</title>
+    </head>
+
+    <body>
+
+    <div class="links">
+        <a href="index.html">Index</a>
+        <a href="qualifications.html">Qualifications</a>
+        <a href="aboutMe.html">About Me</a>
+    </div>
+
+    <div>
+
+            <button id="ecotone">Ecotone</button>
+            <button id="robust">Robust</button>
+            <button id="nightlight">Nightlight</button>
+            <script>
+
+                let body = document.querySelector('body');
+                document.querySelector('#ecotone').onclick = function() {
+                    body.style.backgroundColor = '#52ab98';
+                    console.log(body.style.backgroundColor);
+                };
+                document.querySelector('#robust').onclick = function() {
+                    body.style.backgroundColor = '#5f2c3e';
+                    console.log(body.style.backgroundColor);
+                };
+                document.querySelector('#nightlight').onclick = function() {
+                    body.style.backgroundColor = '#000000';
+                    console.log(body.style.backgroundColor);
+                };
+
+            </script>
+        </div>
+
+    <h1>John Doe</h1>
+    <section>
+        <h2>Contact John for a quote</h2>
+    </section>
+    <div class="dot"> </div>
+    <hr>
+
+    <!-- NOTE: method="POST" is not working.-->
+    <form onsubmit="thank(); return true;" action="submission.html" method="GET">
+
+
+
+        <label for="suffix">Suffix</label>
+        <select name="suffix" id="suffix">
+            <option value="Mr">Mr.</option>
+            <option value="Ms">Ms.</option>
+            <option value="Mrs">Mrs.</option>
+            <option value="He/Him">He/Him</option>
+            <option value="She/Her">She/Her</option>
+            <option value="They/Them">They/Them</option>
+            <option value="Non-Binary">Non-Binary</option>
+        </select>
+        <br>
+        <label for="name">First Name</label>
+        <br>
+        <input type="text" name="name" id ="name">
+
+        <br>
+
+        <label for="name2">Last Name</label>
+        <br>
+        <input type="text" name="name2" id ="name2">
+        <br>
+
+        <label for="email">E-mail Address</label>
+        <br>
+        <input type="text" name="email" id="email">
+
+        <br>
+
+        <label for="website">Website</label>
+        <br>
+        <input type="text" name="website" id="website">
+
+        <hr>
+
+
+         <label for="amount">How many services in total would you like?</label>
+         <br>
+         <input type="number" name="amount" id="amount">
+
+
+
+        <hr>
+
+
+        <label for="service">What type of service/s do you need? (You can explain "Other" selection in the text field at bottom of page.)</label>
+        <input id="service">
+        <br>
+        <input type="checkbox" name="serve1" id="Sanding" value="Sanding">
+        <label for="Sanding">Sanding</label>
+        <input type="checkbox" name="serve2" id="Salting" value="Salting">
+        <label for="Salting">Salting</label>
+        <input type="checkbox" name="serve3" id="Other" value="Other">
+        <label for="Other">Other</label>
+
+
+        <hr>
+
+        <label for = "budget">How comfortable is your budget?</label>
+        <br>
+        <span>Less comfortable</span>
+        <input type = "range" name="budget" id="budget"
+        value ="6" min="1" max="10">
+        <span>More comfortable</span>
+
+
+        <hr>
+
+        <span>Would you like to become a VIP client, which expedites and adds top priority to your service for a 50% add-on of the original quote?</span>
+        <br>
+        <input type="radio" name="priority" id="yes" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="priority" id="no" value="yes">
+        <label for="no">No</label>
+
+
+        <hr>
+        <div class="dot"> </div>
+
+        <label for="more">Is there anything else you want to add?</label>
+        <br>
+        <textarea id="more" name="more" rows="5" cols="40"></textarea>
+
+        <br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    </body>
+</html>

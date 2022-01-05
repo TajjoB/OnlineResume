@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- Some Javascript...enables stylesheet to work on this page? -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <!--Google Style Sheets -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <div class="links">
+
+                <a href="contact.html">Contact</a>
+                <a href="qualifications.html">Qualifications</a>
+                <a href="aboutMe.html">About Me</a>
+
+        </div>
+
+        <div>
+
+            <button id="ecotone">Ecotone</button>
+            <button id="robust">Robust</button>
+            <button id="nightlight">Nightlight</button>
+            <script>
+
+                let body = document.querySelector('body');
+                document.querySelector('#ecotone').onclick = function() {
+                    body.style.backgroundColor = '#52ab98';
+                    console.log(body.style.backgroundColor);
+                };
+                document.querySelector('#robust').onclick = function() {
+                    body.style.backgroundColor = '#5f2c3e';
+                    console.log(body.style.backgroundColor);
+                };
+                document.querySelector('#nightlight').onclick = function() {
+                    body.style.backgroundColor = '#000000';
+                    console.log(body.style.backgroundColor);
+                };
+
+            </script>
+        </div>
+        <div class="dot"> </div>
+        <!-- Not sure how to get a responsive circle that resizes while staying a proper circle behind text. "<div class="circle"> </div>" -->
+        <h5>Hi, I'm John and I bring sand to the beach!</h5>
+        <div class="dot"> </div>
+
+
+
+    </body>
+</html>
